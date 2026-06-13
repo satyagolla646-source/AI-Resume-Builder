@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.resume{
+    width:75%;
+    margin:30px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+h2{
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#1e293b;
+    border-bottom:2px solid #2563eb;
+    padding-bottom:5px;
+}
+
+p{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#22c55e;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#16a34a;
+}
+</style>
+</head>
+<body>
+
+<h1>{{data.name}}</h1>
+
+<p>Email: {{data.email}}</p>
+<p>Phone: {{data.phone}}</p>
+
+<h2>Professional Summary</h2>
+<p>{{data.summary}}</p>
+
+<h2>Skills</h2>
+<p>{{data.skills}}</p>
+
+<h2>Education</h2>
+<p>{{data.education}}</p>
+
+<h2>Experience</h2>
+<p>{{data.experience}}</p>
+
+<a href="/download">
+<button>Download PDF</button>
+</a>
+
+</body>
+</html>
