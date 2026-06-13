@@ -2,10 +2,11 @@ from flask import Flask, render_template, request, send_file
 from reportlab.pdfgen import canvas
 import google.generativeai as genai
 from textwrap import wrap
+import os
 
 app = Flask(__name__)
 
-genai.configure(api_key="YOUR_API_KEY")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
 resume_data = {}
